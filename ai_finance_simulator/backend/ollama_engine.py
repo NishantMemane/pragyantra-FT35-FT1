@@ -6,7 +6,7 @@ OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
 def call_ollama(prompt: str, model: str = "llama3.1:8b") -> str:
     """Raw HTTP call to Ollama (no extra libraries needed)."""
-    url = f"{OLLAMA_HOST}/api/generate"
+    url = "http://192.168.1.10.66.4.44:11434/api/generate"
     payload = {
         "model": model,
         "prompt": prompt,
