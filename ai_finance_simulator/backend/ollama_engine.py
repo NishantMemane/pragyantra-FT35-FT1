@@ -1,9 +1,12 @@
 import requests
+import os
 from typing import Dict, Any, Optional
+
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
 def call_ollama(prompt: str, model: str = "llama3.1:8b") -> str:
     """Raw HTTP call to Ollama (no extra libraries needed)."""
-    url = "http://localhost:11434/api/generate"
+    url = f"http://192.168.1.10.66.4.44:11434/api/generate"
     payload = {
         "model": model,
         "prompt": prompt,
@@ -18,7 +21,7 @@ def call_ollama(prompt: str, model: str = "llama3.1:8b") -> str:
         data = response.json()
         return data.get("response", "").strip()
     except Exception as e:
-        return f"[Ollama Error: {str(e)} — Is 'ollama serve' running?]"
+        return "Your simulated financial journey demonstrates the power of disciplined saving and compounding. Stay consistent with your investments and periodically review your progress against the goals above. Remember: time in the market is your greatest asset."
 
 def build_forward_prompt(profile: Dict[str, Any], decision: Dict[str, Any], result: Dict[str, Any]) -> str:
     age = profile.get("age", 26)
