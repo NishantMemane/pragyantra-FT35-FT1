@@ -1,9 +1,12 @@
 import requests
+import os
 from typing import Dict, Any, Optional
+
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
 def call_ollama(prompt: str, model: str = "llama3.1:8b") -> str:
     """Raw HTTP call to Ollama (no extra libraries needed)."""
-    url = "http://localhost:11434/api/generate"
+    url = f"{OLLAMA_HOST}/api/generate"
     payload = {
         "model": model,
         "prompt": prompt,
