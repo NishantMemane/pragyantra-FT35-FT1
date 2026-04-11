@@ -1,0 +1,53 @@
+# Core LLM + RAG
+langchain
+langchain-community
+langchain-core
+
+# Local LLM (Ollama integration)
+ollama
+
+# Vector Database
+chromadb
+
+# Embeddings
+sentence-transformers
+
+# PDF Processing
+pymupdf
+unstructured
+
+# API
+fastapi
+uvicorn
+
+# Agents / Workflow
+langgraph
+
+# Data handling
+pandas
+numpy
+
+# ML (for anomaly detection / fraud)
+scikit-learn
+
+# Environment variables
+python-dotenv
+
+# Streamlit UI (for demo)
+streamlit
+
+# JSON & validation
+pydantic
+
+# Optional (better performance / async)
+httpx
+
+# Logging / utilities
+tqdm
+
+
+transformers
+accelerate
+bitsandbytes
+python-jose
+qdrant-client
